@@ -3,7 +3,13 @@ from bs4 import BeautifulSoup
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 
-date = input("Enter a year (down to 2006): ")
+while true:
+    try:
+        date = input("Enter a year (down to 2006): ")
+        if int(date) > 2005:
+            break
+    except ValueError:
+        print("Date should be above 2005!")
 
 URL = f"https://www.billboard.com/charts/year-end/{date}/hot-100-songs/"
 SPOTIPY_CLIENT_ID = "___"
