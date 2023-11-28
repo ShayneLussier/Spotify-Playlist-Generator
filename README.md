@@ -27,7 +27,7 @@ The Billboard charts may return artists and collaborators as one string. ex:
 + Future Featuring Drake & Tems
 
 Without splitting to find the main artist, only around 60% of the songs would be returned in the playlist. The following code returns over 90% of the songs, on the low end, to the playlist.
-```
+```python
 for artist in artists_rest:
     if '&' in artist:
         name = (artist.getText().strip()).split('&')
